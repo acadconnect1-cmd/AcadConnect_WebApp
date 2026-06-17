@@ -1,0 +1,1 @@
+-- This migration has been moved to 20260613000001_storage_buckets.sql to ensure proper execution order.

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details | AcadConnect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1e",
+                        "primary-container": "#1e293b",
+                        "outline-variant": "#c5c6cd",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#041528",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary-container": "#8191a9",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#8590a6",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed": "#00174b",
+                        "outline": "#75777d",
+                        "on-primary-fixed": "#111c2d",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#d8e3fb",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "primary-fixed-dim": "#bcc7de",
+                        "on-secondary": "#ffffff",
+                        "primary": "#091426",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#316bf3",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "tertiary-container": "#1a2a3e",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#fefcff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-tint": "#545f73",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-variant": "#e0e3e5",
+                        "background": "#f7f9fb",
+                        "inverse-primary": "#bcc7de",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-bright": "#f7f9fb",
+                        "secondary": "#0051d5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#45474c",
+                        "tertiary-fixed-dim": "#b7c8e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "section-padding": "80px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display": ["60px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-4">
+<div class="font-headline-md text-headline-md font-bold text-primary">AcadConnect</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="#">Jobs</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-body-md text-body-md" href="#">Institutions</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-body-md text-body-md" href="#">Educators</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-body-md text-body-md" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+<button class="hidden md:block text-on-surface-variant font-semibold hover:text-secondary transition-colors px-4 py-2">Sign In</button>
+<button class="bg-primary text-on-primary font-semibold px-6 py-2.5 rounded-lg hover:opacity-90 transition-opacity">Post a Job</button>
+</div>
+</div>
+</header>
+<!-- Sticky Job Action Bar (Desktop only) -->
+<div class="sticky top-[73px] z-40 bg-surface-container-lowest border-b border-outline-variant/30 glass-effect hidden md:block">
+<div class="max-w-[1280px] mx-auto px-gutter py-4 flex items-center justify-between">
+<div class="flex items-center gap-stack-md">
+<div class="w-12 h-12 bg-white border border-outline-variant rounded-lg flex items-center justify-center p-2">
+<img alt="University Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk6GLWIhHJTb3bcBxwtFgRYDUAfjCnNFQZedRwH48UeGY7G9SM5y10ICuaaBxc0kiruA06PS_UryceBvPDQJsOsiF7jp0qG-8IiyiEHjGPdfLuT3R0B9kKXNRSAeMf1q1JPCQBuPknX8VikIAgOj_y7JSk5iKz4mw9-uJw3s-yp41s7L_EtWw8-No4GnNot_0uyKO0LqE-QwGKJGC2e0MLoBqDnIlP8ChTqi_0fwPzLAEUk7NvUmtGbuAkyVJ7jgnUFfTDQ49aiNyD"/>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary leading-tight">Senior Professor of Quantum Physics</h2>
+<p class="text-on-surface-variant font-label-md text-label-md">Stanford University • Palo Alto, CA</p>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+<button class="bg-secondary text-on-secondary font-bold px-8 py-3 rounded-lg hover:shadow-lg transition-all active:opacity-80">
+                    Apply Now
+                </button>
+</div>
+</div>
+</div>
+<!-- Main Content Grid -->
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-stack-lg md:py-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-gutter items-start">
+<!-- Sidebar (Left on Desktop, Bottom on Mobile) -->
+<aside class="lg:col-span-1 space-y-gutter order-2 lg:order-1">
+<!-- Institution Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 card-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">About Stanford</h3>
+<div class="space-y-stack-md">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="groups">groups</span>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Students</p>
+<p class="font-bold text-primary">17,000+</p>
+</div>
+</div>
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="trophy">trophy</span>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">World Ranking</p>
+<p class="font-bold text-primary">#3 Global</p>
+</div>
+</div>
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Location</p>
+<p class="font-bold text-primary">Palo Alto, CA</p>
+</div>
+</div>
+</div>
+<div class="mt-stack-lg pt-stack-lg border-t border-outline-variant">
+<p class="text-body-md text-on-surface-variant mb-stack-md leading-relaxed">
+                            A hub for innovation and academic excellence in the heart of Silicon Valley.
+                        </p>
+<a class="text-secondary font-bold flex items-center gap-1 hover:underline" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Related Jobs -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 card-shadow">
+<h3 class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-widest mb-stack-md">Other openings</h3>
+<div class="space-y-stack-md">
+<a class="block group" href="#">
+<p class="font-bold text-primary group-hover:text-secondary transition-colors">Research Assistant - Optics</p>
+<p class="text-label-sm text-on-surface-variant">Full-time • Science Dept</p>
+</a>
+<a class="block group" href="#">
+<p class="font-bold text-primary group-hover:text-secondary transition-colors">Dean of Student Affairs</p>
+<p class="text-label-sm text-on-surface-variant">Executive • Administration</p>
+</a>
+<a class="block group" href="#">
+<p class="font-bold text-primary group-hover:text-secondary transition-colors">Lab Technician</p>
+<p class="text-label-sm text-on-surface-variant">Contract • Physics Lab</p>
+</a>
+</div>
+</div>
+<!-- Report Link -->
+<div class="flex flex-col gap-stack-sm px-2">
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-2 text-label-sm font-label-sm">
+<span class="material-symbols-outlined" data-icon="report">report</span> Report this listing
+                    </button>
+<p class="text-on-surface-variant/60 text-label-sm">Posted 2 days ago • Job ID: 99420</p>
+</div>
+</aside>
+<!-- Main Job Content -->
+<div class="lg:col-span-3 space-y-stack-lg order-1 lg:order-2">
+<!-- Mobile Only Header (Hidden on Desktop) -->
+<div class="md:hidden space-y-stack-md">
+<div class="w-16 h-16 bg-white border border-outline-variant rounded-lg flex items-center justify-center p-3">
+<img alt="University Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQdf0sLtK1YRkW01jNiUZJ-c03WglrGG030gk1jwWvGc44-Xv4F2NtrcU5gbCRLKuBRUgeYrH268PB-Bfsn5S_-6Y8LrkHRaReYWqbZE5f0O35XAAjoxAFxNy4KAJuZoz1I1r7fNzY08fql7jAg920v7ngUVjsmrJznuB-pnN3JKRqOBTlXTlHd95PfE8dYYNp1WeGkrzMD-LGQHL7K_Z_1PrRwJWNkKlgXpNQXjiWHqKAxKZ3wbh4Mk8h3gVi4TMDe3jxN3ZK6oFW"/>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Senior Professor of Quantum Physics</h1>
+<div class="flex flex-wrap gap-stack-sm">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-label-sm font-label-sm">Full-time</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-label-sm font-label-sm">Tenure Track</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-label-sm font-label-sm">$180k - $240k</span>
+</div>
+</div>
+<!-- Featured Image -->
+<div class="relative rounded-xl overflow-hidden h-64 md:h-96 group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand, high-angle interior shot of a contemporary university lecture hall featuring tiered mahogany seating and a massive floor-to-ceiling glass wall. The lighting is bright and natural, reflecting the professional and academic ethos of the institution. Subtle shadows and soft textures create a serene, focused atmosphere typical of a world-class educational facility. The color palette is composed of warm wood tones and clean white surfaces with a high-end corporate modernist feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgwEf56EeCruQxSChaAzhCH0zTuj8SnF2UoEY7MxBvTGVwexZT-_9xsdrz70_xfXQdXnanQSCV2POKtFvPCFcb5uqeMqYWek_aPGB3mbTg3AfWWV4ynro7IJqjnFtmIcXIo3ArrtXlYi6_cE76o-Aqbujwet8yEwM2XHCCFc1n1Gd6xAPLzZ39KRCSRr5etzu_MRscrAyrN3gzseJihWlw2PZiTe17ZCcdNj5dOY7Fe0-CuZH5vj9qHJgSn3S559eea_5zkoONRFtQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<!-- Job Description Section -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 card-shadow space-y-stack-lg">
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Role Overview</h2>
+<div class="text-body-lg text-on-surface-variant leading-relaxed space-y-stack-md">
+<p>Stanford University's Department of Physics is seeking an eminent scholar for the position of Senior Professor of Quantum Physics. This tenure-track role offers a unique opportunity to lead transformative research at the intersection of quantum mechanics, information theory, and advanced material sciences.</p>
+<p>The successful candidate will be expected to maintain an internationally recognized research program, mentor doctoral students, and contribute to our undergraduate curriculum with innovative teaching methods.</p>
+</div>
+</section>
+<section class="grid md:grid-cols-2 gap-gutter">
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-widest mb-stack-md">Qualifications</h3>
+<ul class="space-y-stack-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="check_circle">check_circle</span>
+                                    Ph.D. in Physics or closely related field.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="check_circle">check_circle</span>
+                                    Minimum 10 years of post-doctoral research experience.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="check_circle">check_circle</span>
+                                    Proven track record of high-impact publications.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="check_circle">check_circle</span>
+                                    Experience in securing large-scale research funding.
+                                </li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-widest mb-stack-md">Benefits</h3>
+<ul class="space-y-stack-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="add">add</span>
+                                    Competitive salary with performance bonuses.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="add">add</span>
+                                    Comprehensive health and dental insurance.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="add">add</span>
+                                    Subsidized campus housing opportunities.
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" data-icon="add">add</span>
+                                    Relocation assistance and research start-up fund.
+                                </li>
+</ul>
+</div>
+</section>
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Institutional Culture</h2>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                            At Stanford, we believe that academic diversity is the cornerstone of discovery. Our faculty members are encouraged to collaborate across departments, bridging the gap between theoretical physics and engineering. We foster an environment that values curiosity, integrity, and the pursuit of knowledge for the betterment of humanity.
+                        </p>
+</section>
+</div>
+<!-- Final Call to Action -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter bg-primary p-8 rounded-xl text-on-primary">
+<div class="text-center md:text-left">
+<h3 class="font-headline-md text-headline-md mb-2">Ready to shape the future?</h3>
+<p class="text-on-primary-container opacity-90">Applications close on October 30, 2024.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-stack-md w-full md:w-auto">
+<button class="bg-secondary text-on-secondary font-bold px-10 py-4 rounded-lg hover:scale-105 transition-transform">Apply Now</button>
+<button class="border border-on-primary/30 text-on-primary font-bold px-10 py-4 rounded-lg hover:bg-white/10 transition-colors">Save for Later</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-section-padding grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-stack-md">
+<div class="font-headline-md text-headline-md font-bold text-primary">AcadConnect</div>
+<p class="text-on-surface-variant text-body-md leading-relaxed">
+                    Connecting elite academic institutions with the world's most brilliant educational professionals.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-primary mb-stack-md">Job Seekers</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Academic Jobs</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Administrative Jobs</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Educator Resources</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-primary mb-stack-md">Institutions</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Post a Job</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Search Talent</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Institutional Solutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-primary mb-stack-md">Support</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-6 border-t border-outline-variant/50 text-center md:text-left">
+<p class="text-on-surface-variant text-label-sm">© 2024 AcadConnect. All rights reserved. Empowering Higher Education globally.</p>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for subtle fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, aside > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

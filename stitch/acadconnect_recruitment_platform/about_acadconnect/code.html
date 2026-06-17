@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | AcadConnect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#191c1e",
+                        "primary-container": "#1e293b",
+                        "outline-variant": "#c5c6cd",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#041528",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary-container": "#8191a9",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#8590a6",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed": "#00174b",
+                        "outline": "#75777d",
+                        "on-primary-fixed": "#111c2d",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#d8e3fb",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "primary-fixed-dim": "#bcc7de",
+                        "on-secondary": "#ffffff",
+                        "primary": "#091426",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#316bf3",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "tertiary-container": "#1a2a3e",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#fefcff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-tint": "#545f73",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-variant": "#e0e3e5",
+                        "background": "#f7f9fb",
+                        "inverse-primary": "#bcc7de",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-bright": "#f7f9fb",
+                        "secondary": "#0051d5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#45474c",
+                        "tertiary-fixed-dim": "#b7c8e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "section-padding": "80px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary/20">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<nav class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-4">
+<div class="flex items-center gap-stack-lg">
+<span class="font-headline-md text-headline-md font-bold text-primary">AcadConnect</span>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Jobs</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Institutions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Educators</a>
+<a class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="hidden md:block font-body-md text-body-md text-on-surface-variant hover:text-secondary px-4 py-2 transition-all">Sign In</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-body-md text-body-md font-semibold hover:opacity-90 transition-opacity">Post a Job</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-section-padding pb-section-padding md:pt-32 md:pb-32">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="inline-block px-3 py-1 bg-secondary/10 text-secondary font-label-md text-label-md rounded mb-stack-md">OUR LEGACY</span>
+<h1 class="font-display text-[48px] md:text-display leading-tight mb-stack-md text-primary">Bridging the Gap in Academic Excellence.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-stack-lg">
+                        Empowering institutions and educators to build the future of global learning through professional connectivity and trust.
+                    </p>
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-body-md text-body-md font-bold hover:shadow-lg transition-all">Explore Opportunities</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-body-md text-body-md font-bold hover:bg-primary/5 transition-all">Partner With Us</button>
+</div>
+</div>
+<div class="relative mt-stack-lg lg:mt-0">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-outline-variant">
+<img alt="Academic Institution" class="w-full aspect-video lg:aspect-square object-cover" data-alt="A sophisticated architectural shot of a modern university library interior, featuring high ceilings, clean lines, and soft natural sunlight streaming through large glass windows. The atmosphere is quiet and professional, reflecting high-end academic credibility. The color palette consists of neutral whites, deep blues, and warm oak wood textures, aligning with a corporate modernist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBApitCBP2U2apYxjx66QdYbx_guNl6SPK935ceQ7DQqzhj6X0zmN7L_KYd6znR8Qvw2JWpdGUR57zMGAsqosstZZKhiTR7G_QcF9AcN_Kw3a_E0b3zx5DLrxwG8T-v_xOiG8qh3a0scPpzEIjpC_R3Iw2z6_S5jIOSKLT9tBd1BXitAGBZBRrGT3ePWwEMGBnlqJQlc-Q06tv1MCCGlSECFHsNBJ69UPyYOEGjPWFinEEhYcnZ49V1a-HElCzcS7r4QS4QSGjhEPKj"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary-fixed opacity-30 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Key Stats Section (Bento Inspired) -->
+<section class="bg-surface-container-low py-section-padding">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'FILL' 1;">work</span>
+<div class="font-display text-headline-lg text-primary mb-2">12,400+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Successful Placements</p>
+</div>
+<div class="p-8 bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'FILL' 1;">school</span>
+<div class="font-display text-headline-lg text-primary mb-2">850+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Institutions</p>
+</div>
+<div class="p-8 bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="font-display text-headline-lg text-primary mb-2">45k+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Verified Educators</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-section-padding">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2">
+<div class="relative">
+<img alt="The Founders" class="rounded-xl border border-outline-variant shadow-lg" data-alt="A candid, professional photograph of a diverse team of academics and tech founders in a bright, modern glass-walled office environment. They are collaborating over a large table with architectural plans and digital screens visible. The lighting is crisp and airy, suggesting innovation and forward-thinking. The style is professional, clean, and minimalist with Slate 200 accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKTeID8VSvihg_tQYXTOyKUiKoHGMT0gO8y72zA6hFX325cN3ClAUNVNhncCH3VWkHj4EOw7hAMcW1O2n3XI2oObOdVvs8LpKJaDlfPo6WJoKD8bOrvSlwHJhKm-yhLKtZh-eSH-kf2fTD6b2WjKNn7AVwlFxn-460a2Lus-zFh4wxrP9ij_Xf-ny2437fVKXe1qK-Y23jOv-591vfeDdVVrONpYYURlGhfeKXDPg6yRmFM0nx13g-Uru1iM5i_bLfFfmBLdrDAHbh"/>
+<div class="absolute -top-4 -left-4 bg-primary p-6 rounded-lg text-on-primary hidden md:block">
+<p class="font-label-md text-label-md italic">"Education is the bedrock of progress."</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Our Story</h2>
+<div class="space-y-stack-md font-body-md text-on-surface-variant leading-relaxed">
+<p>Founded in 2018, AcadConnect emerged from a singular observation: the recruitment landscape in higher education was fragmented, opaque, and inefficient. Our founders, a mix of former university deans and technology pioneers, envisioned a platform that prioritized academic integrity over generic recruitment metrics.</p>
+<p>We spent two years consulting with top-tier research institutions and independent colleges to understand their unique cultural and professional requirements. The result is a specialized ecosystem where verified expertise meets institutional vision.</p>
+<p>Today, AcadConnect serves as the digital backbone for academic hiring across four continents, ensuring that the right minds find the right classrooms and research labs, every single day.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision (Asymmetric Layout) -->
+<section class="py-section-padding bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 transform translate-x-1/2"></div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="space-y-12">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary-fixed mb-stack-sm">Our Mission</h3>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">To democratize access to elite educational roles, fostering a global community where talent is recognized by merit and institutions thrive through diverse intellectual capital.</p>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary-fixed mb-stack-sm">Our Vision</h3>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">To become the universal standard for academic professional identity, bridging the gap between historical excellence and future innovation in education technology.</p>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="h-64 bg-surface/10 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10">
+<img alt="Tradition" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A close-up abstract view of classic university architecture, focusing on the intricate details of a gothic-style stone archway juxtaposed against a clear blue sky. The image emphasizes history, stability, and institutional tradition. The visual tone is high-contrast and sharp, fitting within a professional academic brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMaHzsOtbzNeODVHeG818RzADPXM8Vt2jE806BUrTBjYjSNSdBqcatDXEj7kIsT9POw84zlgitblAv3sMvxlyVtXy4qLlhSyNDPbsZ90BDbSJ4q4W3QKm5yf7BTaSXyJDgUmcUKWGFaXmiEgmSSH6gCVY6q5rUaOSJ_Cm1TLqDITX8Wi57BRgAUssYQlKTpVAsJvP5JigQCzusDlaQE-Bfrzj3_LXRBBjIQkEYiAhmQljRkdN3ioWI1mDYOnqToqd8xLv2KF1MQ-sf"/>
+</div>
+<div class="h-48 bg-surface/10 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10">
+<img alt="Innovation" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A vibrant, modern classroom scene showing a diverse group of adult students engaged in a high-tech seminar. A large digital interactive whiteboard is visible in the background with complex educational diagrams. The lighting is warm and inviting, representing the future of collaborative education. The style is clean, sharp, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvoxKK6f5tiNR4Gr1XmG33avL3O6Ve9dqCa57hjQbvs0-5DmOsplFd-kTtlqK_yZ-V0vRDKYUjQ41uQ0pT0wThPOr8XtfU6wV8hFnRMRcSOFguXj4hTsIe1-Rsh4cGM68Dy4ip3VjlJiucrLH9RtNfMu_pXirBe7c39Nn1YcvorillvkctYhgJFWHS5hZ18XK_UUfPLS3v7HyAH1R23UhDL2mPqeTeeOKhVrk9Cp6i3d2Max4UERZm30owGdQV4D07V4Gk9R-q0kKT"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-48 bg-surface/10 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10">
+<img alt="Research" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional top-down view of a minimalist desk setup with an open laptop showing a clean user interface, a notebook, and a pair of spectacles. The lighting is soft and daylight-balanced, conveying a sense of organized productivity and research-focused work. The aesthetic is clean-mode with a focus on professional SaaS quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOlhjQwGRTob-PY-t5Pog7ulMBCZQL-OcZXJVmKAYfwGwE4C1PETDfghor3Q0nHmWVWYoDaxU13YnGNQ4ci0XwM6JdAazMR8S_skBNYCUlaZgponuLTIojdc4AtZ5GtSzUa_p9H5r4e4t5aw3yAclx1XFLMEalft1bjIeDFLp_llnvH2Cw1RxPFnV3DzkU5M2bjHgcJ7U4KQw2oNV7QSY-DBExbeDFmJnZEEkR1-tIetmspwZuTg-9JZ-xWfRDkxg7kFaKa9cLMJ9V"/>
+</div>
+<div class="h-64 bg-surface/10 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10">
+<img alt="Community" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="A diverse group of professional educators standing together in a bright, modern lobby, smiling with confidence. They represent a global community of academics. The setting is high-end, featuring clean glass and steel architecture. The lighting is professional and bright, emphasizing a light-mode corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSfo3o5vO1J15r-BSiqP24bEMuHkr7C0vfDBsH38VWqvuzJubW86GQ-Vu4C_MUPHWcmhVv27RNiD_7McEfY8mT30AO88-adQ_0TWCyqQb3L_lLmrX_VfsY3lHyuzkG6kq8gKwzsJmf-USpO670SvGs4o8KQ8ZellDJzVrDBXmbIofYJqdbLY3wXHJxrOBe15poXiAx1GBcvDEEik61hh0icHoYeWPmyyVaFReU-xuHgwQw277bsvM_cixFIrJaepm4QBWPBIdMo368"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Team Section -->
+<section class="py-section-padding">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-sm">The Minds Behind the Platform</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Our leadership brings together decades of experience in higher education administration, software engineering, and talent strategy.</p>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Team Member 1 -->
+<div class="text-center group">
+<div class="relative mb-stack-md overflow-hidden rounded-xl aspect-[4/5] border border-outline-variant">
+<img alt="Dr. Julian Vane" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-105" data-alt="A professional studio portrait of a male executive in his late 40s, wearing a charcoal grey suit and a white shirt. He has a warm but authoritative smile, representing leadership and institutional trust. The background is a soft, out-of-focus office setting in neutral tones. The lighting is soft-key and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz_UJeU6Tnoj-C8k0OrDcdrZkhM1yJP3hzgKsDl89En7ENJzWbdKDgEjHzkyeIvLYAlCAL1TYY4MOQyqMTGzCEh2KEbTh3mcZR5N5YANBJrbCYu1a24vBd4YMuBRx01LWRwVH-pt4WKtKZrvCo5qEmcXHypSqQ4F9hG7NMdxxx41r2OHYvqlGIH0fF2LsdDiUs1aRJt-SXj8sD3pH5GgK9O_XXcxyN5t6jjAtT5vOE7pdX1zgyRICBaHx7aUIwYq8yiGU3__3C05Ju"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Dr. Julian Vane</h4>
+<p class="font-label-md text-label-md text-secondary uppercase mb-2">Chief Executive Officer</p>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Former Dean of Humanities at Sterling University.</p>
+</div>
+<!-- Team Member 2 -->
+<div class="text-center group">
+<div class="relative mb-stack-md overflow-hidden rounded-xl aspect-[4/5] border border-outline-variant">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-105" data-alt="A professional studio portrait of a woman in her late 30s, wearing a modern navy blue blazer and white top. She looks confident and intelligent, representing technological innovation and academic leadership. The background is a clean, neutral white. The lighting is high-key and bright, fitting a premium corporate UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA52e-QxqYbgxu1ziOy_qu5Fb3j2lmnz6JteRj0p2GHu2LEPegW3M8nNU3lxhJckgDpxMap1WR1Wb_YvEUxqWHPCmWl-CJgF8wyTMDAz0YuSQipMSHjVbcsVSLgztML3waUgmdbdw-peifPCF81fltwMOTJ1S-ZeoX9TT474kfk7gX5L_WahHQMnk56kcyQhTsZJ7ed_kflSvvh7TFLl8FK-Mpj6PknsHM2qioh3eLK-t3yIVgQlZjO4_tVvxj5E6UP4pXa6Ij_bDC2"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Elena Rodriguez</h4>
+<p class="font-label-md text-label-md text-secondary uppercase mb-2">Chief Technology Officer</p>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Previously Head of Engineering at EduFlow Systems.</p>
+</div>
+<!-- Team Member 3 -->
+<div class="text-center group">
+<div class="relative mb-stack-md overflow-hidden rounded-xl aspect-[4/5] border border-outline-variant">
+<img alt="Marcus Chen" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-105" data-alt="A professional studio headshot of a man in his early 40s with glasses, wearing a smart-casual sweater over a collared shirt. He exudes a friendly, approachable, and highly intelligent personality. The background is a minimal light grey, and the lighting is soft and even. Perfect for a high-end professional team grid." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDUIL2Gwr6wPmPZyasZ9Ez1OgUxLWlB9-6SiVRNHy-vxwpMUhf6KJBw4e9ZcvMc703sCogQzND3Uj5OCAmt414YDwK1KbC4Xnrp-0cxWQi_q_nVUqih_vKcyPSTvC3E3daxSuNJ7EF-9WCJrk46tLHI59ShG3eHzSjF0s4rFCXrdRDrxH-6J8l3vEE3n9PHMZQZOKgjqn5VktaumLqSWuYgQo3r4SlQfPBr5Mm0rH1yJeDzd5itzQfXbkmlCOZ0wXhgINoHgGRDTcq"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Marcus Chen</h4>
+<p class="font-label-md text-label-md text-secondary uppercase mb-2">Head of Partnerships</p>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">15 years in global academic talent strategy.</p>
+</div>
+<!-- Team Member 4 -->
+<div class="text-center group">
+<div class="relative mb-stack-md overflow-hidden rounded-xl aspect-[4/5] border border-outline-variant">
+<img alt="Sarah Jenkins" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-105" data-alt="A professional studio portrait of a woman in her 40s, wearing a elegant black dress and simple gold jewelry. She has a serene and highly competent expression. The environment is a modern, sunlit architectural space with soft shadows. The overall aesthetic is one of high-quality corporate elegance and academic reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrxtfDTdKUfW6Af1ir-XVo0eiJ1dA9UcIpr58VY0Y9KGX1UjVpJYDoBf9lMn2f-jwHQtIToZFBiqKnVTauEmMcdf-TxNjs-mGAD9DzA06xZLGkSJssoNZ0W3lQ-MvPV8DwdAdcSZRdL-t5jkhKEhj6ApCCmy6Tc7D2cvqfh9pvvgu1dTpvp1d44DpI-Aq51K6QVm4pKYbE7x-drk2hzuZh_oe4k3ZFu_AkbjtPrNeZc3OxJAv_qjig7cvdkLSSZsPekfLT_UVlDUiV"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Sarah Jenkins</h4>
+<p class="font-label-md text-label-md text-secondary uppercase mb-2">Chief Operating Officer</p>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Strategic operations lead for numerous EdTech exits.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding bg-surface-container border-y border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Ready to Shape the Future?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-lg">Whether you're looking to hire the next generation of researchers or seeking your next tenure-track position, we're here to help.</p>
+<div class="flex flex-wrap justify-center gap-stack-md">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-body-md text-body-md font-bold hover:shadow-xl transition-all">Browse Current Jobs</button>
+<button class="bg-surface text-primary border border-primary px-10 py-4 rounded-lg font-body-md text-body-md font-bold hover:bg-primary/5 transition-all">List Your Institution</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant w-full">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-section-padding grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-md text-headline-md font-bold text-primary mb-stack-md block">AcadConnect</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Setting the standard for excellence in academic recruitment worldwide.</p>
+<div class="flex gap-stack-md">
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-secondary" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary uppercase mb-stack-md">Job Seekers</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Academic Jobs</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Administrative Jobs</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Verified Profiles</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary uppercase mb-stack-md">Institutions</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Post a Job</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Talent Pipeline</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary uppercase mb-stack-md">Company</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary font-bold hover:underline transition-all" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Contact Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-secondary transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 AcadConnect. All rights reserved.</p>
+<div class="flex gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary" href="#">Security</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions: Intersection Observer for simple reveal effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Team card hover effects
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('img').style.filter = 'grayscale(0)';
+            });
+        });
+    </script>
+</body></html>

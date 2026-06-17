@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#191c1e",
+                    "primary-container": "#1e293b",
+                    "outline-variant": "#c5c6cd",
+                    "inverse-surface": "#2d3133",
+                    "tertiary": "#041528",
+                    "tertiary-fixed": "#d3e4fe",
+                    "on-tertiary-container": "#8191a9",
+                    "surface-container": "#eceef0",
+                    "on-primary-container": "#8590a6",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-fixed": "#00174b",
+                    "outline": "#75777d",
+                    "on-primary-fixed": "#111c2d",
+                    "surface-container-low": "#f2f4f6",
+                    "primary-fixed": "#d8e3fb",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "primary-fixed-dim": "#bcc7de",
+                    "on-secondary": "#ffffff",
+                    "primary": "#091426",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#316bf3",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary-fixed-variant": "#3c475a",
+                    "tertiary-container": "#1a2a3e",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "on-background": "#191c1e",
+                    "on-secondary-container": "#fefcff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-tint": "#545f73",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dbe1ff",
+                    "surface-variant": "#e0e3e5",
+                    "background": "#f7f9fb",
+                    "inverse-primary": "#bcc7de",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#0051d5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#45474c",
+                    "tertiary-fixed-dim": "#b7c8e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "section-padding": "80px",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "display": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-header {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 0%, #dbe1ff 0%, #f7f9fb 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 glass-header w-full top-0 sticky z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-4">
+<div class="font-headline-md text-headline-md font-bold text-primary">AcadConnect</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Jobs</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Institutions</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Educators</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-200" href="#">Contact</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="hidden md:block font-label-md text-label-md text-secondary hover:underline transition-all">Sign In</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">Post a Job</button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient pt-20 pb-section-padding px-margin-mobile md:px-gutter">
+<div class="max-w-[1280px] mx-auto text-center">
+<span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm px-4 py-1.5 rounded-full mb-6">World-Class Academic Recruitment</span>
+<h1 class="font-display text-display max-w-4xl mx-auto mb-8 text-primary">
+                    Connecting the World's Best Institutions with Exceptional Educators
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    The premier global network for professors, researchers, and academic leadership. Secure your future in high-ranking universities.
+                </p>
+<!-- Large Search Bar Container -->
+<div class="bg-surface-container-lowest border border-outline-variant p-2 rounded-xl shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-2">
+<div class="flex items-center flex-1 w-full px-4 border-r border-outline-variant">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md py-3" placeholder="Job Title" type="text"/>
+</div>
+<div class="flex items-center flex-1 w-full px-4 border-r border-outline-variant">
+<span class="material-symbols-outlined text-outline mr-2">account_balance</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md py-3" placeholder="Institution" type="text"/>
+</div>
+<div class="flex items-center flex-1 w-full px-4">
+<span class="material-symbols-outlined text-outline mr-2">location_on</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md py-3" placeholder="Location" type="text"/>
+</div>
+<button class="w-full md:w-auto bg-secondary text-on-secondary px-8 py-3 rounded-lg font-headline-md text-body-md hover:bg-secondary/90 transition-all">
+                        Browse Jobs
+                    </button>
+</div>
+</div>
+</section>
+<!-- Trusted Institutions (Logo Cloud) -->
+<section class="py-12 bg-surface-container-low overflow-hidden border-y border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter text-center">
+<p class="font-label-sm text-label-sm text-outline mb-8 uppercase tracking-widest">Trusted by 500+ Top Global Universities</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2">school</span>
+<span class="font-bold text-lg text-primary">STANFORD</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2">architecture</span>
+<span class="font-bold text-lg text-primary">MIT</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2">history_edu</span>
+<span class="font-bold text-lg text-primary">OXFORD</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2">balance</span>
+<span class="font-bold text-lg text-primary">HARVARD</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2">menu_book</span>
+<span class="font-bold text-lg text-primary">CAMBRIDGE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-[1280px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Streamlining Global Recruitment</h2>
+<p class="font-body-md text-on-surface-variant">A tailored ecosystem for the modern academic landscape.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-gutter">
+<!-- For Educators -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-secondary mb-8">For Educators</h3>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center font-bold text-secondary">01</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold mb-2">Build Your Academic Profile</h4>
+<p class="text-on-surface-variant font-body-md">Showcase your publications, citations, and teaching philosophy in a professional format.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center font-bold text-secondary">02</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold mb-2">Get Smart-Matched</h4>
+<p class="text-on-surface-variant font-body-md">Our algorithm suggests roles that align with your research niche and career goals.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center font-bold text-secondary">03</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold mb-2">Direct Institution Contact</h4>
+<p class="text-on-surface-variant font-body-md">Apply directly to search committees and track your application status in real-time.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- For Institutions -->
+<div class="p-8 rounded-xl bg-primary text-on-primary">
+<h3 class="font-headline-md text-headline-md text-secondary-fixed mb-8">For Institutions</h3>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-fixed/20 flex items-center justify-center font-bold text-secondary-fixed">01</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold mb-2">Showcase Your Department</h4>
+<p class="text-on-primary-container font-body-md">Attract elite talent by highlighting your research facilities and institutional culture.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-fixed/20 flex items-center justify-center font-bold text-secondary-fixed">02</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold mb-2">Advanced Candidate Filtering</h4>
+<p class="text-on-primary-container font-body-md">Filter by academic rank, citation count, and specific disciplinary expertise.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-fixed/20 flex items-center justify-center font-bold text-secondary-fixed">03</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold mb-2">Secure Selection Process</h4>
+<p class="text-on-primary-container font-body-md">Coordinate committee reviews and virtual interviews within a unified portal.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Platform Features (Bento Grid) -->
+<section class="py-section-padding bg-surface-container-low px-margin-mobile md:px-gutter">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid md:grid-cols-12 md:grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<!-- Feature 1: Smart Matching -->
+<div class="md:col-span-8 md:row-span-1 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center group hover:shadow-md transition-all">
+<div class="flex-1">
+<div class="w-12 h-12 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Smart Matching</h3>
+<p class="text-on-surface-variant font-body-md">Proprietary AI that connects researchers based on citation influence and specialized research trajectories rather than simple keywords.</p>
+</div>
+<div class="w-full md:w-64 h-40 bg-surface-container rounded-lg overflow-hidden relative">
+<img alt="Data visualization" class="w-full h-full object-cover" data-alt="A clean and professional digital visualization of a neural network map showing interconnected nodes in soft blue and white colors. The lighting is bright and modern, representing data science and smart algorithms. Minimalist aesthetic with high-key lighting for a light-mode UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYcPhWQCo6dVg2YWRLfJnU53P-Q8NTlo9GfuISauB2RufrknlMzQykm2qf1xpX0NaYgBHMCIq4TdIFvvHc6cFolj6odeGro4jgdaP2BroxxhsI8hUNFFQlSqMk3DYaCeHtZ3XKs6BKwYT-xBMhzfztUpc-Vikr3iUACtcLFbqboyClW6z3kGR9YHoMaTcsGYoLYvjN0kYsKw6vrdDCgRG8Gc96vOHc_4bC1vVjtmGEiZ8g6d9LODZvHdUKOLg8riPHjf3hl2T-I-uR"/>
+</div>
+</div>
+<!-- Feature 2: Institutional Branding -->
+<div class="md:col-span-4 md:row-span-2 bg-secondary text-on-secondary p-8 rounded-xl flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="w-12 h-12 bg-white/20 text-white rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">brand_awareness</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Institutional Branding</h3>
+<p class="text-secondary-fixed/80 font-body-md">Create high-impact landing pages for your university departments to attract the world's most sought-after faculty candidates.</p>
+</div>
+<div class="mt-8">
+<img alt="University Architecture" class="rounded-lg shadow-xl border border-white/10 grayscale-[0.2]" data-alt="A majestic and modern university campus building with grand pillars and glass walls. The lighting is warm golden hour, casting soft shadows across the stone plaza. The style is professional and authoritative, evoking a sense of heritage and high-level academic pursuit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuLn2igLa_zbHCmx0XlHOn8KLDxUdYCTDpybju4uu7Eax6STP-1nUwEg3RZOHCPC15rGfgsFeaOjGwu-jYtEoMWAr6RsTyHkmzu-p6fNU65zZHeqwBTeOLUCTt4dutjZqbo4aYjVG10lnMCUg3ZuJ9Rt2oEiHJn9h3WxGQLkJ3NSecERqGeGjG0QGi59bSa1CY17XsejVMm3wdCmza2ehF8KA-Wc-a58Z010sRDVfmLmAiHDK-wk1OrmzXHQ9mo-2ZKOMkLHZEcDGv"/>
+</div>
+</div>
+<!-- Feature 3: Verified Profiles -->
+<div class="md:col-span-8 md:row-span-1 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl flex flex-col md:flex-row-reverse gap-8 items-center group hover:shadow-md transition-all">
+<div class="flex-1 text-right md:text-left">
+<div class="w-12 h-12 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-4 md:mr-0 ml-auto md:ml-0">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Verified Academic Profiles</h3>
+<p class="text-on-surface-variant font-body-md">Every profile is verified through institutional email or ORCID credentials, ensuring a community of high-trust professionals.</p>
+</div>
+<div class="w-full md:w-64 h-40 bg-surface-container rounded-lg overflow-hidden flex items-center justify-center relative">
+<span class="material-symbols-outlined text-secondary text-7xl opacity-20">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Jobs -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-[1280px] mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Featured Academic Positions</h2>
+<p class="text-on-surface-variant font-body-md">Latest opportunities from leading research institutions.</p>
+</div>
+<button class="text-secondary font-label-md flex items-center gap-1 hover:underline">
+                    View all 1,240 jobs <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl hover:border-secondary transition-colors group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary font-bold">ST</div>
+<span class="bg-primary-fixed text-on-primary-fixed text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Research</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-1 group-hover:text-secondary transition-colors">Associate Professor of Artificial Intelligence</h4>
+<p class="text-on-surface-variant text-body-md mb-4">Stanford University</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center text-on-surface-variant text-label-md gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Palo Alto, CA
+                        </div>
+<div class="flex items-center text-on-surface-variant text-label-md gap-2">
+<span class="material-symbols-outlined text-sm">payments</span>
+                            $185,000 - $240,000
+                        </div>
+</div>
+<button class="w-full border border-secondary text-secondary py-2 rounded-lg font-label-md hover:bg-secondary hover:text-on-secondary transition-all">Apply Now</button>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl hover:border-secondary transition-colors group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary font-bold">OX</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Faculty</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-1 group-hover:text-secondary transition-colors">Chair in Theoretical Physics</h4>
+<p class="text-on-surface-variant text-body-md mb-4">University of Oxford</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center text-on-surface-variant text-label-md gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Oxford, UK
+                        </div>
+<div class="flex items-center text-on-surface-variant text-label-md gap-2">
+<span class="material-symbols-outlined text-sm">payments</span>
+                            £82,000 - £110,000
+                        </div>
+</div>
+<button class="w-full border border-secondary text-secondary py-2 rounded-lg font-label-md hover:bg-secondary hover:text-on-secondary transition-all">Apply Now</button>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl hover:border-secondary transition-colors group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary font-bold">ETH</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Executive</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-1 group-hover:text-secondary transition-colors">Dean of Engineering &amp; Technology</h4>
+<p class="text-on-surface-variant text-body-md mb-4">ETH Zürich</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center text-on-surface-variant text-label-md gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Zürich, Switzerland
+                        </div>
+<div class="flex items-center text-on-surface-variant text-label-md gap-2">
+<span class="material-symbols-outlined text-sm">payments</span>
+                            Competitive Package
+                        </div>
+</div>
+<button class="w-full border border-secondary text-secondary py-2 rounded-lg font-label-md hover:bg-secondary hover:text-on-secondary transition-all">Apply Now</button>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding bg-primary text-on-primary">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-secondary-fixed font-label-md mb-4 block">Success Stories</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Voices from the Academic Community</h2>
+<div class="relative">
+<span class="material-symbols-outlined text-6xl text-white/10 absolute -top-10 -left-6">format_quote</span>
+<p class="font-body-lg text-body-lg italic mb-8 relative z-10">
+                                "AcadConnect has fundamentally changed how we approach talent acquisition. The quality of applicants for our tenure-track positions has seen a significant boost in both diversity and academic achievement."
+                            </p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Professional portrait" class="w-full h-full object-cover" data-alt="A professional headshot of an elderly academic woman with glasses and a friendly, authoritative expression. She is in a blurred office setting with bookshelves behind her. The lighting is warm and intellectual, fitting a corporate modern UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVUmnAhatGDVQ0QZTMVsIAnoVyGA1a93aMyYh-WcPM21fU9GDNjNZp8kS6wIrrp1_SkqJRJtApFfU75yjwdO-QDKUx5PajONRMFWRiGDpstMUNS_X1TklfeLdqDlaOT7oO_AE51G7OzP7ZC9iEJ51-JdiZ3p_VTquVSoAfq-LNwKnE4kPPGC5IsLvmGcOK0XtprTh-N-L7XN24J0oPJas8fgx-cXHCtO4HglrchwvvFFbRH_shfsDXbbfjcIdcQo0r_hPXtxqkX89J"/>
+</div>
+<div>
+<p class="font-bold">Dr. Elena Rodriguez</p>
+<p class="text-on-primary-container text-label-sm">Head of Department, Applied Sciences</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-6 rounded-xl border border-white/10">
+<p class="font-display text-4xl mb-2">94%</p>
+<p class="text-on-primary-container text-label-sm">Institutional Satisfaction Rate</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10 mt-8">
+<p class="font-display text-4xl mb-2">12k+</p>
+<p class="text-on-primary-container text-label-sm">Active Research Fellows</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10">
+<p class="font-display text-4xl mb-2">200+</p>
+<p class="text-on-primary-container text-label-sm">Countries Represented</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10 mt-8">
+<p class="font-display text-4xl mb-2">30m</p>
+<p class="text-on-primary-container text-label-sm">Aggregated Citations</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-padding px-margin-mobile md:px-gutter">
+<div class="max-w-[1280px] mx-auto bg-secondary rounded-3xl p-12 md:p-20 text-center text-on-secondary relative overflow-hidden">
+<!-- Abstract Background Shapes -->
+<div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="font-display text-headline-lg mb-6">Ready to elevate your academic career?</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed/80 max-w-2xl mx-auto mb-10">Join thousands of professors and researchers who have found their ideal academic home through AcadConnect.</p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-white text-secondary px-10 py-4 rounded-xl font-headline-md text-body-md shadow-lg hover:scale-[1.02] transition-all">Get Started for Free</button>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-headline-md text-body-md shadow-lg hover:bg-primary/90 transition-all">Find Your Next Star Faculty</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-section-padding grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-6">AcadConnect</div>
+<p class="text-on-surface-variant font-body-md mb-8">The professional network for global higher education and research recruitment.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6">Explore</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Academic Jobs</a></li>
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Administrative Jobs</a></li>
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Post a Job</a></li>
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Institutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6">Company</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Contact Us</a></li>
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary hover:underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6">Newsletter</h4>
+<p class="text-on-surface-variant font-body-md mb-4">Stay updated with the latest research roles.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-lowest border border-outline-variant px-4 py-2 rounded-lg w-full focus:ring-2 focus:ring-secondary focus:outline-none" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-8 border-t border-outline-variant text-center md:text-left">
+<p class="text-on-surface-variant font-body-md">© 2024 AcadConnect. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interactions for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

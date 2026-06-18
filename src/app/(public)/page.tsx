@@ -13,9 +13,7 @@ import {
   ShieldCheck,
   ArrowRight,
   Quote,
-  GraduationCap,
-  Globe2,
-  BookOpenCheck
+  Globe2
 } from 'lucide-react'
 
 export const metadata = {
@@ -97,32 +95,56 @@ export default async function HomePage() {
       {/* Hero Section */}
       <HomeHeroClient />
 
-      {/* Trusted Institutions (Logo Cloud) */}
-      <section className="py-12 bg-muted/40 border-y border-border/50">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-          <p className="text-xs font-bold text-muted-foreground/85 uppercase tracking-widest mb-8">
-            Trusted by Top Global Universities
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-            <div className="flex flex-col items-center">
-              <GraduationCap className="h-8 w-8 text-foreground mb-1 animate-bounce" />
-              <span className="font-extrabold text-xs tracking-widest text-foreground">PACIFIC STATE</span>
+      {/* Platform Trust & Credibility Framework */}
+      <section className="py-16 bg-muted/40 border-y border-border/50">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">
+              Our Trust Ecosystem
+            </p>
+            <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              Built for Academic Integrity
+            </h3>
+            <p className="text-sm text-muted-foreground max-w-lg mx-auto mt-2 leading-relaxed">
+              AcadConnect implements a rigorous verification standard to secure scholarly credentials, protect candidate privacy, and prevent recruitment fraud.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-5 rounded-2xl bg-card border border-border/60 shadow-xs space-y-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <ShieldCheck className="h-5.5 w-5.5" />
+              </div>
+              <h4 className="text-xs font-bold text-foreground">ORCID Linkage</h4>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">
+                Scholarly authorship, publication history, and research titles are linked directly to candidates verified ORCID IDs.
+              </p>
             </div>
-            <div className="flex flex-col items-center">
-              <Building2 className="h-8 w-8 text-foreground mb-1" />
-              <span className="font-extrabold text-xs tracking-widest text-foreground">METRO TECH</span>
+            <div className="p-5 rounded-2xl bg-card border border-border/60 shadow-xs space-y-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <Globe2 className="h-5.5 w-5.5" />
+              </div>
+              <h4 className="text-xs font-bold text-foreground">Domain Verification</h4>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">
+                Institutional recruiters are validated using official university domains (.edu, .ac.in) before gaining publishing access.
+              </p>
             </div>
-            <div className="flex flex-col items-center">
-              <BookOpenCheck className="h-8 w-8 text-foreground mb-1" />
-              <span className="font-extrabold text-xs tracking-widest text-foreground">APPLIED LABS</span>
+            <div className="p-5 rounded-2xl bg-card border border-border/60 shadow-xs space-y-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <Building2 className="h-5.5 w-5.5" />
+              </div>
+              <h4 className="text-xs font-bold text-foreground">Gated Job Board</h4>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">
+                Vacancies remain invisible to search indexes and candidates until the listing institution completes administrator audit approvals.
+              </p>
             </div>
-            <div className="flex flex-col items-center">
-              <Award className="h-8 w-8 text-foreground mb-1" />
-              <span className="font-extrabold text-xs tracking-widest text-foreground">EXCELSIOR</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe2 className="h-8 w-8 text-foreground mb-1" />
-              <span className="font-extrabold text-xs tracking-widest text-foreground">NORDIC LABS</span>
+            <div className="p-5 rounded-2xl bg-card border border-border/60 shadow-xs space-y-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <Award className="h-5.5 w-5.5" />
+              </div>
+              <h4 className="text-xs font-bold text-foreground">Private Document Storage</h4>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">
+                CVs and candidate files are stored in RLS-gated secure buckets, streaming exclusively to authorized search committees.
+              </p>
             </div>
           </div>
         </div>
@@ -262,7 +284,8 @@ export default async function HomePage() {
                 <div className="w-full md:w-64 h-40 bg-muted/30 rounded-2xl flex items-center justify-center relative overflow-hidden border border-border/50 shrink-0">
                   <svg className="absolute inset-0 w-full h-full p-6 text-primary/10" viewBox="0 0 200 100" fill="none">
                     <path d="M10 80 Q 50 10, 100 50 T 190 20" stroke="currentColor" strokeWidth="2" />
-                    <circle cx="10" cy="80" r="4" fill="var(--color-primary)" className="animate-ping" />
+                    <circle cx="10" cy="80" r="4" fill="var(--color-primary)" />
+                    <circle cx="10" cy="80" r="4" fill="var(--color-primary)" className="animate-ping" style={{ transformOrigin: '10px 80px' }} />
                     <circle cx="100" cy="50" r="4" fill="var(--color-primary)" />
                     <circle cx="190" cy="20" r="4" fill="var(--color-primary)" />
                     <path d="M10 80 L 100 50 M 100 50 L 190 20" stroke="var(--color-primary)" strokeWidth="1" strokeDasharray="3 3" />
@@ -372,7 +395,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial & Stats Section */}
+      {/* Vision & Platform Pillars Section */}
       <section className="py-24 bg-muted/40 border-y border-border/50">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -380,20 +403,20 @@ export default async function HomePage() {
               <div className="inline-flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                 <span className="text-xs font-bold text-primary uppercase tracking-widest">
-                  Success Stories
+                  Our Vision
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-tight">
-                Voices from the Academic Community
+                A New Standard for Academic Recruitment
               </h2>
               <div className="relative pl-6 border-l-2 border-primary/30">
                 <Quote className="h-10 w-10 text-primary/10 absolute -top-4 -left-4 -scale-y-100" />
                 <p className="text-lg italic leading-relaxed text-muted-foreground mb-6">
-                  &quot;AcadConnect has fundamentally changed how we approach talent acquisition. The quality of applicants for our tenure-track positions has seen a significant boost in both diversity and academic achievement.&quot;
+                  &quot;Academic hiring should be defined by scholarly merit, research alignment, and institutional trust—not by keyword optimization and third-party recruiter noise.&quot;
                 </p>
                 <div>
-                  <p className="font-bold text-foreground">Dr. Elena Rodriguez</p>
-                  <p className="text-sm text-muted-foreground">Head of Applied Sciences, Pacific Northwest University</p>
+                  <p className="font-bold text-foreground">The AcadConnect Team</p>
+                  <p className="text-sm text-muted-foreground">Founding Mission</p>
                 </div>
               </div>
             </div>
@@ -401,26 +424,30 @@ export default async function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               <Card className="border border-border/60 bg-card/60 p-6 rounded-2xl shadow-xs">
                 <CardContent className="p-0">
-                  <p className="text-3xl md:text-4xl font-extrabold text-primary mb-1">94%</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Institutional Satisfaction</p>
+                  <p className="text-2xl md:text-3xl font-extrabold text-primary mb-1">ORCID</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Verified Credentials</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">Authentic academic identity matching.</p>
                 </CardContent>
               </Card>
               <Card className="border border-border/60 bg-card/60 p-6 rounded-2xl mt-6 shadow-xs">
                 <CardContent className="p-0">
-                  <p className="text-3xl md:text-4xl font-extrabold text-primary mb-1">12k+</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Active Research Fellows</p>
+                  <p className="text-2xl md:text-3xl font-extrabold text-primary mb-1">Direct</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Peer-to-Peer</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">Straight connection to search committees.</p>
                 </CardContent>
               </Card>
               <Card className="border border-border/60 bg-card/60 p-6 rounded-2xl shadow-xs">
                 <CardContent className="p-0">
-                  <p className="text-3xl md:text-4xl font-extrabold text-primary mb-1">200+</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Countries Represented</p>
+                  <p className="text-2xl md:text-3xl font-extrabold text-primary mb-1">Gated</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Privacy-First Profiles</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">Full control over CV and credential access.</p>
                 </CardContent>
               </Card>
               <Card className="border border-border/60 bg-card/60 p-6 rounded-2xl mt-6 shadow-xs">
                 <CardContent className="p-0">
-                  <p className="text-3xl md:text-4xl font-extrabold text-primary mb-1">30m</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Aggregated Citations</p>
+                  <p className="text-2xl md:text-3xl font-extrabold text-primary mb-1">Zero</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Agency Spam</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">Only authentic vacancies and candidates.</p>
                 </CardContent>
               </Card>
             </div>

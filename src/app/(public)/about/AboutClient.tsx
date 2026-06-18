@@ -12,7 +12,6 @@ import {
   BookmarkCheck,
   Compass,
   Eye,
-  Mail,
   Globe2,
   ShieldCheck,
   Activity,
@@ -20,49 +19,7 @@ import {
   ShieldAlert
 } from 'lucide-react'
 
-interface TeamMember {
-  name: string
-  role: string
-  focus: string
-  achievements: string
-  bio: string
-  initials: string
-}
 
-const teamMembers: TeamMember[] = [
-  {
-    name: 'Dr. Elena Rodriguez',
-    role: 'Co-Founder & CEO',
-    focus: 'Higher Ed Administration & Policy',
-    achievements: 'Former Dean of Applied Sciences',
-    bio: 'Over 15 years in university leadership, specializing in tenure processes, recruitment governance, and research development strategy.',
-    initials: 'ER',
-  },
-  {
-    name: 'Dr. Sarah Jenkins',
-    role: 'Co-Founder & CTO',
-    focus: 'Matching Tech & Trusted Identity',
-    achievements: 'Ph.D. in Computer Science',
-    bio: 'Computational scientist passionate about securing scholarly identity and developing data pipelines for global recruitment matching.',
-    initials: 'SJ',
-  },
-  {
-    name: 'Marcus Vance',
-    role: 'Head of Partnerships',
-    focus: 'Institutional Scale & ATS Integration',
-    achievements: 'Formed global networks across 4 continents',
-    bio: 'Consults with university search committees to optimize faculty acquisition pipelines and integrate recruitment systems.',
-    initials: 'MV',
-  },
-  {
-    name: 'Prof. David Chen',
-    role: 'Chief Academic Advisor',
-    focus: 'Recruitment Compliance & Equity',
-    achievements: 'Distinguished Professor of Computer Science',
-    bio: 'Provides strategic guidance on academic compliance, diversity initiatives, and fair tenure-track candidate assessments.',
-    initials: 'DC',
-  },
-]
 
 interface Pillar {
   tabTitle: string
@@ -164,7 +121,7 @@ export function AboutClient() {
         </div>
       </section>
 
-      {/* Key Stats Section (Bento Inspired) */}
+      {/* Platform Values Section */}
       <section className="bg-muted/30 py-16 border-y border-border/50">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-3 gap-6">
@@ -174,8 +131,9 @@ export function AboutClient() {
                   <BookmarkCheck className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-extrabold text-foreground tracking-tight">12,400+</h3>
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Successful Placements</p>
+                  <h3 className="text-2xl font-extrabold text-foreground tracking-tight">100% Verify</h3>
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Verification Rate</p>
+                  <p className="text-xs text-muted-foreground/80 mt-2 font-medium">Every vacancy and academic profile is domain-checked and credential-verified before indexing.</p>
                 </div>
               </CardContent>
             </Card>
@@ -186,8 +144,9 @@ export function AboutClient() {
                   <Building2 className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-extrabold text-foreground tracking-tight">850+</h3>
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Active Institutions</p>
+                  <h3 className="text-2xl font-extrabold text-foreground tracking-tight">Direct Path</h3>
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Committee Channels</p>
+                  <p className="text-xs text-muted-foreground/80 mt-2 font-medium">Applications bypass third-party recruitment agencies and land straight in department review queues.</p>
                 </div>
               </CardContent>
             </Card>
@@ -198,8 +157,9 @@ export function AboutClient() {
                   <Users2 className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-extrabold text-foreground tracking-tight">45k+</h3>
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Verified Educators</p>
+                  <h3 className="text-2xl font-extrabold text-foreground tracking-tight">Built for Scholars</h3>
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mt-1">Academic Context</p>
+                  <p className="text-xs text-muted-foreground/80 mt-2 font-medium">Designed specifically around publication history, research citations, and academic tenure track structures.</p>
                 </div>
               </CardContent>
             </Card>
@@ -378,55 +338,7 @@ export function AboutClient() {
         </div>
       </section>
 
-      {/* Leadership Team Section */}
-      <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto w-full">
-        <div className="text-center mb-16 space-y-3">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground">
-            The Minds Behind the Platform
-          </h2>
-          <p className="text-muted-foreground text-base max-w-xl mx-auto font-medium">
-            Decades of experience in higher education administration, systems engineering, and talent strategy.
-          </p>
-        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, idx) => (
-            <Card key={idx} className="border border-border/60 bg-card overflow-hidden hover-premium transition-all duration-300 flex flex-col justify-between h-full group">
-              <CardContent className="p-6 space-y-5 flex-1 flex flex-col justify-between text-left">
-                <div>
-                  <div className="w-14 h-14 bg-primary/10 border border-primary/15 rounded-2xl flex items-center justify-center font-bold text-base text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                    {member.initials}
-                  </div>
-                  
-                  <h3 className="font-bold text-foreground text-base">{member.name}</h3>
-                  <p className="text-[10px] font-extrabold text-primary uppercase tracking-wider mb-2">{member.role}</p>
-                  
-                  <div className="space-y-2 pt-1 pb-3">
-                    <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest">Focus Area</p>
-                    <p className="text-xs font-bold text-foreground/90 leading-tight">{member.focus}</p>
-                    <p className="text-[9px] text-primary/80 font-semibold italic">{member.achievements}</p>
-                  </div>
-                  
-                  <p className="text-muted-foreground text-xs leading-relaxed font-medium border-t border-border/50 pt-3">
-                    {member.bio}
-                  </p>
-                </div>
-                
-                <div className="flex gap-3.5 pt-4 border-t border-border/50">
-                  <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-250" aria-label="LinkedIn">
-                    <svg className="h-4.5 w-4.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                  </a>
-                  <a href={`mailto:info@acadconnect.com?subject=Inquiry for ${member.name}`} className="text-muted-foreground hover:text-primary transition-colors duration-250" aria-label="Email">
-                    <Mail className="h-4.5 w-4.5" />
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
     </div>
   )
 }

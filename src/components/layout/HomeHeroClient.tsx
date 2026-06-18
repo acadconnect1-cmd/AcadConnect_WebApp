@@ -24,7 +24,7 @@ const scholars: ScholarNode[] = [
     id: 'sj',
     initials: 'SJ',
     name: 'Dr. Sarah Jenkins',
-    university: 'METRO TECH',
+    university: 'SCIENCE DEPT',
     match: '98%',
     field: 'Artificial Intelligence',
     x: 20,
@@ -36,7 +36,7 @@ const scholars: ScholarNode[] = [
     id: 'er',
     initials: 'ER',
     name: 'Dr. Elena Rodriguez',
-    university: 'PACIFIC STATE',
+    university: 'RESEARCH HUB',
     match: '97%',
     field: 'Higher Ed Administration',
     x: 80,
@@ -48,7 +48,7 @@ const scholars: ScholarNode[] = [
     id: 'mv',
     initials: 'MV',
     name: 'Marcus Vance',
-    university: 'APPLIED LABS',
+    university: 'BUSINESS SCHOOL',
     match: '95%',
     field: 'ATS Integration',
     x: 25,
@@ -60,7 +60,7 @@ const scholars: ScholarNode[] = [
     id: 'al',
     initials: 'AL',
     name: 'Dr. A. Lundqvist',
-    university: 'NORDIC LABS',
+    university: 'TECH LAB',
     match: '94%',
     field: 'Quantum Computing',
     x: 75,
@@ -199,35 +199,35 @@ export function HomeHeroClient() {
           </svg>
 
           {/* Floating University Nodes */}
-          {/* North Node: PACIFIC STATE */}
+          {/* North Node: RESEARCH HUB */}
           <div className="absolute top-[10%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
             <div className="bg-card border border-border/80 px-3.5 py-2 rounded-2xl shadow-xs flex items-center gap-2">
               <Globe2 className="w-3.5 h-3.5 text-primary" />
-              <span className="text-[10px] font-extrabold tracking-wider text-foreground">PACIFIC STATE</span>
+              <span className="text-[10px] font-extrabold tracking-wider text-foreground">RESEARCH HUB</span>
             </div>
           </div>
 
-          {/* East Node: METRO TECH */}
+          {/* East Node: SCIENCE DEPT */}
           <div className="absolute top-[30%] left-[80%] -translate-x-[50%] -translate-y-[50%]">
             <div className="bg-card border border-border/80 px-3.5 py-2 rounded-2xl shadow-xs flex items-center gap-2">
               <Building2 className="w-3.5 h-3.5 text-primary" />
-              <span className="text-[10px] font-extrabold tracking-wider text-foreground">METRO TECH</span>
+              <span className="text-[10px] font-extrabold tracking-wider text-foreground">SCIENCE DEPT</span>
             </div>
           </div>
 
-          {/* South Node: APPLIED LABS */}
+          {/* South Node: BUSINESS SCHOOL */}
           <div className="absolute top-[90%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
             <div className="bg-card border border-border/80 px-3.5 py-2 rounded-2xl shadow-xs flex items-center gap-2">
               <BookOpenCheck className="w-3.5 h-3.5 text-primary" />
-              <span className="text-[10px] font-extrabold tracking-wider text-foreground">APPLIED LABS</span>
+              <span className="text-[10px] font-extrabold tracking-wider text-foreground">BUSINESS SCHOOL</span>
             </div>
           </div>
 
-          {/* West Node: NORDIC LABS */}
+          {/* West Node: TECH LAB */}
           <div className="absolute top-[55%] left-[20%] -translate-x-[50%] -translate-y-[50%]">
             <div className="bg-card border border-border/80 px-3.5 py-2 rounded-2xl shadow-xs flex items-center gap-2">
               <Globe2 className="w-3.5 h-3.5 text-primary" />
-              <span className="text-[10px] font-extrabold tracking-wider text-foreground">NORDIC LABS</span>
+              <span className="text-[10px] font-extrabold tracking-wider text-foreground">TECH LAB</span>
             </div>
           </div>
 
